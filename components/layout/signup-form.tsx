@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Label } from "../ui/label";
-import { Input } from "../ui/input";
+import Input from "../ui/input";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import { FileUpload } from "@/components/ui/file-upload";
@@ -12,8 +12,9 @@ export function SignupForm() {
     toast.success("Form submitted");
   };
   const [files, setFiles] = useState<File[]>([]);
-  const handleFileUpload = (files: File[]) => {
-    setFiles(files);
+  const handleFileUpload = (file: File[]) => {
+    setFiles(file);
+    console.log(files);
     toast.success("File uploaded");
   };
 
@@ -27,7 +28,7 @@ export function SignupForm() {
         reviewing your work.
       </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form className="my-8" onSubmit={(e) => handleSubmit(e)}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
