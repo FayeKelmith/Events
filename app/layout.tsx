@@ -1,7 +1,8 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Nav from "@/components/nav-bar";
-
+import Nav from "@/components/layout/nav-bar";
+import { Toaster } from "sonner";
+import { FooterSection } from "@/components/layout/footer";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,6 +19,8 @@ export default function RootLayout({
         >
           <Nav />
           {children}
+          <FooterSection />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
