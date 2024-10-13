@@ -3,19 +3,26 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { SparklesCore } from "../ui/sparkles";
-import Link from "next/link"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 const Nav = () => {
   const { setTheme, theme } = useTheme();
   return (
     <nav className="flex w-full justify-between px-8">
-      
       <div className="px-12 dark:bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <Link href="/">
-        <h1 className="font-bold text-center dark:text-white relative z-20">
-          CreativeWing
-        </h1>
+          <h1 className="font-bold text-center dark:text-white relative z-20">
+            CreativeWing
+          </h1>
         </Link>
-        <div className="w-[16rem] h-8 relative">
+        <div className="w-[18rem] h-8 relative">
           {/* Gradients */}
           <div className="absolute  top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
           <div className="absolute  top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
@@ -38,29 +45,54 @@ const Nav = () => {
       </div>
       <div className="flex ">
         <ul className="flex justify-between text-xl">
-          <li className="mx-4 py-2 hover:font-bold hover:border-b-2 hover:shadow-lg duration-300 rounded-md px-8">
-            Home
+          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+            <Link href="/about">About Us</Link>
           </li>
-          <li className="mx-4 py-2 hover:font-bold hover:border-b-2 hover:shadow-lg duration-300 rounded-md px-8">
-            Events
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <div className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4 ">
+                Courses
+              </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56">
+              <DropdownMenuLabel className="text-xl">
+                Short Term Courses
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+
+              <DropdownMenuItem className="text-lg">Past</DropdownMenuItem>
+              <DropdownMenuItem className="text-lg">Ongoing</DropdownMenuItem>
+              <DropdownMenuItem className="text-lg">Future</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+            <Link href="/conferences">Conferences</Link>
           </li>
-          <li className="mx-4 py-2 hover:font-bold hover:border-b-2 hover:shadow-lg duration-300 rounded-md px-8">
-            Blog
+          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+            <Link href="/workshop">Workshop</Link>
           </li>
-          <li className="mx-4 py-2 hover:font-bold hover:border-b-2 hover:shadow-lg duration-300 rounded-md px-8">
-            Sign In
+          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+            <Link href="/books">Books</Link>
           </li>
-          <li className="mx-4 py-2 hover:font-bold hover:border-b-2 hover:shadow-lg duration-300 rounded-md px-8">
-            Sign Up
+          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+            <Link href="/journal">Journals</Link>
+          </li>
+          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+            <Link href="/register">Join Us</Link>
+          </li>
+          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+            <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
-        <div className="">
+        <div className="ml-4">
           <Button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="flex items-center"
+            size="icon"
           >
             {theme === "dark" ? <Sun /> : <Moon />}
-            <span className="ml-2">{theme === "dark" ? "Light" : "Dark"}</span>
           </Button>
         </div>
       </div>
