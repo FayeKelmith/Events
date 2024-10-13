@@ -34,7 +34,8 @@ const ContactUs = () => {
         <div className="bg-secondary rounded-lg p-6 h-full max-lg:order-1">
           <h2 className="text-xl ">Contact Information</h2>
           <p className="text-sm  mt-4">
-            Have some big idea or brand to develop and need help?
+            Our team will reach out to you at the earliest possible time to
+            address your concern.
           </p>
 
           <ul className="mt-16 space-y-8">
