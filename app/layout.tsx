@@ -18,7 +18,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Nav />
-          {children}
+          <main className="mx-auto container max-w-7xl">{children}</main>
           <FooterSection />
           <Toaster />
         </ThemeProvider>

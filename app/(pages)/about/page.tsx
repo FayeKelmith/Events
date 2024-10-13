@@ -4,7 +4,7 @@ import Image from "next/image";
 import { WobbleCard } from "@/components/ui/wobble-card";
 const AboutUs = () => {
   return (
-    <div className="max-w-7xl mx-auto container">
+    <div className="">
       <section className="h-[40rem] mb-10 items-center flex justify-center">
         <h2 className=" text-3xl md:text-7xl  mx-auto text-center">
           Our Story

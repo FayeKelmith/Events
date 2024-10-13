@@ -15,11 +15,11 @@ import Link from "next/link";
 const Nav = () => {
   const { setTheme, theme } = useTheme();
   return (
-    <nav className="flex w-full justify-between px-8">
+    <nav className="flex w-full justify-between p-8">
       <div className="px-12 dark:bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
         <Link href="/">
           <h1 className="font-bold text-center dark:text-white relative z-20">
-            CreativeWing
+            Creative Wing 🕊
           </h1>
         </Link>
         <div className="w-[18rem] h-8 relative">
@@ -56,14 +56,22 @@ const Nav = () => {
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
-              <DropdownMenuLabel className="text-xl">
-                Short Term Courses
+              <DropdownMenuLabel className="text-xl text-center bg-primary py-2">
+                <Link href="/courses" className=" hover:underline">
+                  All Courses
+                </Link>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />
 
-              <DropdownMenuItem className="text-lg">Past</DropdownMenuItem>
-              <DropdownMenuItem className="text-lg">Ongoing</DropdownMenuItem>
-              <DropdownMenuItem className="text-lg">Future</DropdownMenuItem>
+              <DropdownMenuItem className="text-lg">
+                <Link href="/courses#ongoing">Ongoing</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-lg">
+                <Link href="/courses#upcoming">Upcoming</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-lg">
+                <Link href="/courses#past">Completed</Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
