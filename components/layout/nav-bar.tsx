@@ -45,13 +45,13 @@ const Nav = () => {
       </div>
       <div className="flex ">
         <ul className="flex justify-between text-xl">
-          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+          <li className="ml-2 py-2 h-fit hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
             <Link href="/about">About Us</Link>
           </li>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4 ">
+              <div className="ml-2 py-2 h-fit hover:font-bold hover:shadow-lg duration-300 rounded-md px-4 ">
                 Courses
               </div>
             </DropdownMenuTrigger>
@@ -67,22 +67,22 @@ const Nav = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+          <li className="ml-2 py-2 h-fit hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
             <Link href="/conferences">Conferences</Link>
           </li>
-          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+          <li className="ml-2 py-2 h-fit hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
             <Link href="/workshop">Workshop</Link>
           </li>
-          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+          <li className="ml-2 py-2 h-fit hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
             <Link href="/books">Books</Link>
           </li>
-          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+          <li className="ml-2 py-2 h-fit hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
             <Link href="/journal">Journals</Link>
           </li>
-          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+          <li className="ml-2 py-2 h-fit hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
             <Link href="/register">Join Us</Link>
           </li>
-          <li className="ml-2 py-2 hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
+          <li className="ml-2 py-2 h-fit hover:font-bold hover:shadow-lg duration-300 rounded-md px-4">
             <Link href="/contact">Contact Us</Link>
           </li>
         </ul>
