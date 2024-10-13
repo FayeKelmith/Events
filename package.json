@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "shadcn": "pnpm dlx shadcn@latest add",
-    "accern": "pnpm dlx aceternity-ui@latest add"
+    "aceternity": "pnpm dlx aceternity-ui@latest add"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.2",
